@@ -1,0 +1,3 @@
+
+print((int(input("Enter a number: "))) % 2 == 0)
+
