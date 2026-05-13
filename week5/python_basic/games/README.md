@@ -53,7 +53,7 @@ You already used this letters [ ].
 
 The hidden word is: #####.
 
-Left you X times to try.
+Left you 5 times to try.
 
 Please guess one letter (or quit to exit): a
 
