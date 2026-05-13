@@ -34,13 +34,13 @@ def checks_alpha(letter):
 
 
 def show_status(inputed_letters, hidden_word, guess_times):
-    print(f"""\n
+    print(f"""\r\n
       ---- HERE IS YOUR STATUS FOR NOW ----
     You already used this letters {inputed_letters}.
           The hidden eord is: {hidden_word}.
          Left you {guess_times} times to try.
       ------------- GOOD LUCK -------------\n
-""")
+""", end="", flush=True)
 
 
 def main():
@@ -48,13 +48,14 @@ def main():
 
     word_list = ["bread", "light", "frame", "storm", "grape", "cloud", "point", "match", "brick", "voice"]
 
-    current_word = word_list[random.choice(word_list)]
+    current_word = random.choice(word_list)
+    print(current_word)
 
     hidden_word = hide_word(len(current_word))
 
     inputed_letters = []
 
-    while guesses_times > 0:
+    while True:
         show_status(inputed_letters, hidden_word, guesses_times)
 
         users_guess = get_a_letter()
@@ -69,9 +70,12 @@ def main():
             if hidden_word == current_word:
                 break
         else:
-            print("Don't give up!\n")
             inputed_letters.append(users_guess)
             guesses_times -= 1
+            if guesses_times > 0:
+                print("Don't give up!\n")
+            else:
+                break
         
 
 
