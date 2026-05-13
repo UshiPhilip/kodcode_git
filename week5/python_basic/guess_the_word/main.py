@@ -49,7 +49,6 @@ def main():
     word_list = ["bread", "light", "frame", "storm", "grape", "cloud", "point", "match", "brick", "voice"]
 
     current_word = random.choice(word_list)
-    print(current_word)
 
     hidden_word = hide_word(len(current_word))
 
