@@ -15,9 +15,9 @@ class Task:
 
     def __str__(self):
         return f"""
-Task name: {self.name}
-Priority level: {"High" if self.priority_level == 3 else "Medium" if self.priority_level == 2 else "Low"}
-Status: {"Completed" if self.is_complete else "Not completed"}\n\n
+    Task name: {self.name}
+    Priority level: {"High" if self.priority_level == 3 else "Medium" if self.priority_level == 2 else "Low"}
+    Status: {"Completed" if self.is_complete else "Not completed"}\n\n
 """
         
         
