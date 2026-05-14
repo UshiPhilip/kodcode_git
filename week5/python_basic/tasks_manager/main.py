@@ -143,14 +143,14 @@ def main():
         elif user_choice == "8":
             daily_summary = get_daily_summary(tasks)
             print(f"""
-        ==================== DAILY SUMMARY ====================
-        
-        There are {len(tasks)} tasks in the system
-        {daily_summary[0]} tasks are still incomplete
-        {daily_summary[1]} tasks are completed
-        {daily_summary[2]} tasks are marked as identify urgent
+    ================ DAILY SUMMARY ================
+    
+    There are {len(tasks)} tasks in the system
+    {daily_summary[0]} tasks are still incomplete
+    {daily_summary[1]} tasks are completed
+    {daily_summary[2]} tasks are marked as identify urgent
 
-        ==================== FINISH SUMMARY ===================
+    ================ FINISH SUMMARY ===============
     """)
 
         elif user_choice == "9":
