@@ -44,7 +44,7 @@ def mark_as_incomplete(task_name, tasks):
     return f"Task {task_name} not found..."
 
 
-def incompleted_tesks(tasks):
+def incomplete_tasks(tasks):
     return [task for task in tasks if not task.is_complete]
 
 
@@ -64,7 +64,7 @@ def delete_task(task_name, tasks):
 
 
 def get_daily_summary(tasks):
-    number_of_incomplete = len(incompleted_tesks(tasks))
+    number_of_incomplete = len(incomplete_tasks(tasks))
     number_of_completed = len(completed_tasks(tasks))
     number_of_urgent_tasks = len(identify_urgent_tasks(tasks))
     return [number_of_incomplete, number_of_completed, number_of_urgent_tasks]
@@ -79,7 +79,7 @@ def menu():
     3. Mark a task as complete
     4. Mark a task as incomplete
     5. See completed tasks
-    6. See incompleted tasks
+    6. See incomplete tasks
     7. Identify urgent tasks
     8. Show daily summary
     9. Delete task
@@ -104,7 +104,7 @@ def main():
             task_name = input("Enter your task name: ")
             priority_level = int(input("Enter the priority task's level [1-3]: "))
             tasks.append(Task(task_name, priority_level))
-            print(f"Task {task_name} added successully to your tasks list!")
+            print(f"Task {task_name} added successfully to your tasks list!")
 
         elif user_choice == "2":
             task_name = input("Enter a task name are you looking for: ")
@@ -130,14 +130,14 @@ def main():
                 print(task, end="|")
 
         elif user_choice == "6":
-            all_incomplete = incompleted_tesks(tasks)
+            all_incomplete = incomplete_tasks(tasks)
             if not all_incomplete:
                 print("No incomplete tasks")
                 continue
             print("All incomplete tasks:")
             for task in all_incomplete:
                 print(task, end="|")
-            print("\nHurry up to compelte them!")
+            print("\nHurry up to complete them!")
 
         elif user_choice == "7":
             urgent_tasks = identify_urgent_tasks(tasks)
