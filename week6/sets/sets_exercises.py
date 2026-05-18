@@ -15,7 +15,7 @@ def count_unique(list_items: list[any]) -> int:
 # ===== Exercise 3 =======
 
 def common_elements(list1: list[any], list2: list[any]) -> list:
-    return list(set(list1) & set(list2))
+    return list(set(list1).intersection(set(list2)))
 
 # ===== Exercise 4 =======
 
